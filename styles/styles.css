@@ -17,6 +17,10 @@ a {
   margin: 0px 15px;
 }
 
+.text {
+  color: #787878;
+}
+
 /* ---- NAV BAR - TOP & BOTTOM ---- */
 
 .nav {
@@ -24,14 +28,15 @@ a {
   padding-left: 0;
 }
 
-.nav:before {
-  content: "";
-  clear: both;
-}
-
 .section h3 {
   background-color: white;
   padding: 15px 0px;
+}
+
+#top-nav:after {
+  content: " ";
+  clear: both;
+  display: table;
 }
 
 #bottom-nav {
@@ -50,6 +55,7 @@ a {
 #bottom-nav h2 {
   float: right;
 }
+
 /* ---- PROFILE ---- */
 
 .profile-image {
@@ -68,30 +74,141 @@ a {
 }
 
 #portfolio {
-  background-color: red;
-  padding: 15px;
+  background-color: white;
+  float: left;
+}
+
+#portfolio h3 {
+  padding-top:  20px;
+  padding-bottom: 20px;
+}
+
+.items {
+  margin: 0px 15px;
 }
 
 /* ---- CONTACT ---- */
 
+#contact:before {
+  content: " ";
+  clear: both;
+  display: table;
+}
+
+#contact h3 {
+  margin-top: 25px;
+}
+
+#contact p:nth-child(even) {
+  padding-bottom: 20px;
+}
 
 /* ---- RESPONSIVE DESIGN ---- */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .item {
-    width: 50%;
+    width: calc(50% - 7.5px);
+    float: left;
+  }
+
+  .items {
+    float: left;
+    padding: 0;
+  }
+
+  .item:nth-child(odd) {
+    margin-right: 15px;
+  }
+
+  .nav {
+    float: right;
+    margin-right: 40px;
+  }
+
+  .nav li {
+    text-align: none;
+    display: inline;
+    background-color: #F8F8F8;
+  }
+
+  .name {
+    float: left;
+    margin-left: 40px;
+  }
+
+  .section h3 {
+    display: inline-block;
+    background-color: #F8F8F8;
+    margin-left: 20px;
+  }
+
+  .profile-image {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 60px;
+    width: 40%;
+  }
+
+  .blurb {
+    text-align: left;
   }
 
 }
 
 @media screen and (min-width: 1024px) {
-  .item {
-    width: 50%;
-    float: left;
-  }
 
   #portfolio {
     margin: 15px;
+  }
+
+  .items {
+    float: left;
+    padding: 0;
+  }
+
+  .item {
+    width: calc(33% - 3.33px);
+    float: left;
+    margin-right: 10px;
+  }
+
+  .item:nth-child(3n+0) {
+    margin-right: 0px;
+  }
+
+  .nav {
+    float: right;
+    margin-right: 40px;
+  }
+
+  .nav li {
+    text-align: none;
+    display: inline;
+    background-color: #F8F8F8;
+  }
+
+  .name {
+    float: left;
+    margin-left: 40px;
+  }
+
+  .section h3 {
+    display: inline-block;
+    background-color: #F8F8F8;
+    margin-left: 20px;
+  }
+
+  .profile-image {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 60px;
+    margin-right: 20px;
+    width: 40%;
+  }
+
+  .blurb {
+    text-align: left;
+    margin-left: 20px;
   }
 
 }
