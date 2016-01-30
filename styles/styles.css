@@ -1,0 +1,97 @@
+/* ---- GENERAL STYLES ---- */
+
+body {
+  background-color: #F8F8F8;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+* {
+  text-align: center;
+}
+
+.wrapper {
+  margin: 0px 15px;
+}
+
+/* ---- NAV BAR - TOP & BOTTOM ---- */
+
+.nav {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.nav:before {
+  content: "";
+  clear: both;
+}
+
+.section h3 {
+  background-color: white;
+  padding: 15px 0px;
+}
+
+#bottom-nav {
+  vertical-align: center;
+  margin: 0;
+}
+
+#bottom-nav li.section {
+  display: none;
+}
+
+#bottom-nav .name {
+  float: left;
+}
+
+#bottom-nav h2 {
+  float: right;
+}
+/* ---- PROFILE ---- */
+
+.profile-image {
+  width: 60%;
+}
+
+.blurb {
+  line-height: 1.5em;
+  color: #787878;
+}
+
+/* ---- PORTFOLIO ---- */
+
+.portfolio-image {
+  width: 100%;
+}
+
+#portfolio {
+  background-color: red;
+  padding: 15px;
+}
+
+/* ---- CONTACT ---- */
+
+
+/* ---- RESPONSIVE DESIGN ---- */
+
+@media screen and (min-width: 768px) {
+  .item {
+    width: 50%;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  .item {
+    width: 50%;
+    float: left;
+  }
+
+  #portfolio {
+    margin: 15px;
+  }
+
+}
