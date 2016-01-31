@@ -12,7 +12,7 @@ body {
 a, li {
   text-decoration: none;
   color: rgb(72,72,72);
-  transition: 0.3s
+  transition: 0.3s;
 }
 
 a:hover, 
