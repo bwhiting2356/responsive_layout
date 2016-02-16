@@ -13,17 +13,9 @@ function setup_button() {
             nav.setAttribute("class", "nav-on");
             nav_showing = true;
         }
-        
-    };  
-
-    
-    
+    };      
 }
 
-
-
-
 window.onload = function() {
-    // console.log(button);
     setup_button();
 }; 
