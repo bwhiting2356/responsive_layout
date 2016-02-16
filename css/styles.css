@@ -421,12 +421,11 @@ hr {
     width: 100px; }
 
   .nav-on, .nav-off {
-    z-index: -1;
     transition: margin-top 0.3s;
     transition-timing-function: ease-in; }
 
   .nav-off {
-    margin-top: -50%;
+    margin-top: -60%;
     overflow: auto; } }
 #top-nav h1 {
   text-align: center;

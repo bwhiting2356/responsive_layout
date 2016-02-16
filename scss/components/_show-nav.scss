@@ -35,13 +35,12 @@
     } 
 
     .nav-on {
-        z-index: -1;
         @include pretty-transition(margin-top);
     } 
 
     .nav-off {
         @extend .nav-on;
-        margin-top: -50%;
+        margin-top: -60%;
         overflow:auto;
     }
 }
