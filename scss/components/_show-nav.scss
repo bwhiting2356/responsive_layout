@@ -1,0 +1,47 @@
+#button {
+    z-index: 10;
+    position: relative;
+    background: $color-background1;
+    padding-bottom: $margin-basic;
+    margin-bottom: -$margin-basic;
+    padding-top: 200px;
+    margin-top: -200px;
+    @include tablet {
+        display: none;
+    }
+}
+
+@include mobile {
+    .button-off {
+        z-index: 10;
+        cursor: pointer; 
+        div {
+            height: 2px;
+            width: 50px;
+            margin: 2px auto;
+            background: $color-grey;
+            @include pretty-transition(width);
+        }
+        div:nth-child(3) {
+            width: calc(100% - 40px);
+        }
+    }
+
+    .button-on {
+        @extend .button-off;
+        div {
+            width: 100px;
+        }
+    } 
+
+    .nav-on {
+        z-index: -1;
+        @include pretty-transition(margin-top);
+    } 
+
+    .nav-off {
+        @extend .nav-on;
+        margin-top: -50%;
+        overflow:auto;
+    }
+}

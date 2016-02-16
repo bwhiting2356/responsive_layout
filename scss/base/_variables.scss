@@ -1,0 +1,30 @@
+// ---- VARIABLES ---- //
+
+// Color variables
+
+$color-grey: #888888;
+$color-background1: lighten($color-grey, 44);
+$color-background2: white;
+$color-basic-heading: darken($color-grey, 25);
+$color-basic-text: $color-grey;
+$color-portofolio-heading: darken($color-grey, 28.2);
+$color-portfolio-text: darken($color-grey, 25);
+
+// Margin and padding variables
+
+$margin-basic: 20px;
+$margin-double: $margin-basic * 2;
+$margin-half: $margin-basic / 2;
+$margin-quarter: $margin-basic / 4;
+$margin-three-quarters: $margin-basic * 0.75;
+
+// Responsive Design
+
+$breakpoint-desktop: 1024px;
+$breakpoint-tablet: 768px;
+$magic-img-width: 310;
+
+// Fonts
+
+$font-family: "Open Sans", sans-serif;
+$font-scale-down: 0.9em;

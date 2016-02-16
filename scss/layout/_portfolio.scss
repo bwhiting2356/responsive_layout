@@ -1,0 +1,47 @@
+// ---- PORTFOLIO STYLES ---- //
+
+
+#portfolio {
+  background-color: $color-background2;
+  padding: 0 $margin-basic $margin-double $margin-basic;
+
+  h3 {
+    padding: 50px 0px;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-weight: lighter;
+    color: $color-portofolio-heading;
+  }
+
+  #items {
+    @include flex;
+    flex-wrap: wrap;
+  }
+
+  .item {
+    margin-bottom: $margin-basic * 2;
+
+    @include tablet {
+      padding: 0 $margin-quarter 0 $margin-quarter;
+    }
+
+    @include calc_item_width($breakpoint-tablet, $breakpoint-desktop);
+  }
+
+  img {
+    width: 100%;
+  }
+
+  p {
+    color: $color-portfolio-text;
+    font-weight: 200;
+    line-height: 1.8em;
+    padding: 0 $margin-basic;
+  }
+
+  @include tablet {
+    padding: 0 $margin-three-quarters 0 $margin-three-quarters;
+  }
+}

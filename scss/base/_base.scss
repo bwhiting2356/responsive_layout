@@ -1,0 +1,49 @@
+// ---- BASE STYLES ---- //
+
+%pretty-hover {
+  transition: all 0.3s;
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+body {
+  background-color: $color-background1;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: $font-family;
+}
+
+h1, h2, h3, a {
+  color: $color-basic-heading;
+}
+
+p {
+  color: $color-basic-text;
+}
+
+ul {
+   list-style-type: none;
+  padding-left: 0;
+}
+
+a, li {
+  text-decoration: none;
+  @extend %pretty-hover;
+}
+
+p, h2, h3, h4 {
+  text-align: center;
+}
+
+.wrapper {
+  @include desktop {
+    margin: 0 $margin-basic;
+  }
+}
+
+hr {
+  margin: 0 $margin-basic;
+}

@@ -1,0 +1,42 @@
+// ---- MIXINS ---- //
+
+@function strip_units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+@mixin calc_item_width($breakpoints...) {
+  @each $breakpoint in $breakpoints {
+    @media screen and (min-width: $breakpoint) {
+      $num_in_row: floor(strip_units($breakpoint) / $magic-img-width);
+      width: calc(100% / #{$num_in_row});
+    }
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$breakpoint-tablet - 1}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
+
+@mixin flex($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin pretty-transition($property) {
+    transition: #{$property} .3s;
+    transition-timing-function: ease-in;
+}
