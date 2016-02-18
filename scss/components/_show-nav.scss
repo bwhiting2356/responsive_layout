@@ -1,4 +1,4 @@
-#button {
+#button-wrapper {
     z-index: 10;
     position: relative;
     background: $color-background1;
@@ -11,36 +11,44 @@
     }
 }
 
-@include mobile {
-    .button-off {
-        z-index: 10;
-        cursor: pointer; 
-        div {
-            height: 2px;
-            width: 50px;
-            margin: 2px auto;
-            background: $color-grey;
-            @include pretty-transition(width);
-        }
-        div:nth-child(3) {
-            width: calc(100% - 40px);
-        }
+#button {
+    @extend %pretty-hover;   
+    z-index: 10;
+    position: relative;
+    @include tablet {
+        display: none;
     }
+}
 
-    .button-on {
-        @extend .button-off;
-        div {
-            width: 100px;
-        }
-    } 
-
-    .nav-on {
-        @include pretty-transition(margin-top);
-    } 
-
-    .nav-off {
-        @extend .nav-on;
-        margin-top: -60%;
-        overflow:auto;
+.button-off {
+    @extend %pretty-hover;   
+    z-index: 10;
+    cursor: pointer; 
+    div {
+        height: 2px;
+        width: 50px;
+        margin: 2px auto;
+        background: $color-grey;
+        @include pretty-transition(width);
     }
+    div:nth-child(3) {
+        width: calc(100% - 40px);
+    }
+}
+
+.button-on {
+    @extend .button-off;
+    div {
+        width: 100px;
+    }
+} 
+
+.nav-on {
+    @include pretty-transition(margin-top);
+} 
+
+.nav-off {
+    @extend .nav-on;
+    margin-top: -225px;
+    overflow:auto;
 }
